@@ -1,23 +1,25 @@
-# testui
+# zy-ui
 
-## Project setup
+## 从零搭建自己的ui库
+
+### 安装依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行环境
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 发布包
 ```
-yarn build
+yarn lib
 ```
 
-### Run your unit tests
+### 组件单元测试
 ```
-yarn test:unit
+yarn test
 ```
 
 ### Customize configuration
