@@ -1,10 +1,17 @@
 # zy-ui
+[![npm version](https://badge.fury.io/js/zy499-ui.svg)](https://badge.fury.io/js/zy499-ui)
 
 ## 从零搭建自己的ui库
 
 ### 安装依赖
 ```
 yarn install
+```
+### usage
+```
+import zyUi from 'zy-ui'
+import 'zy-ui/dist/zy-ui.css'
+Vue.use(zyUi)
 ```
 
 ### 运行环境
