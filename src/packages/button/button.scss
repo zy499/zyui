@@ -1,0 +1,171 @@
+// ? 公共样式
+@import "../styles/_var.scss";
+// ? 公共函数
+@import "../styles/mixins.scss";
+// ? button样式 变量
+$height: 42px;
+$font-size: 14px;
+$color: #606266;
+$border-color: #dcdfe6;
+$background: #fff;
+$active-color: #3a8ee6;
+$hover-color: #409eff;
+$primary-disabled-color: #a0cfff;
+$success-disabled-color: #b3e19d;
+$warning-disabled-color: #f3d19e;
+$danger-disabled-color: #fab6b6;
+$info-disabled-color: #c8c9cc;
+.zy-button {
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: $background;
+  color: $color;
+  font-size: $font-size;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1;
+  padding: 12px 20px;
+  transition: 0.1s;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+  &:active {
+    color: $active-color;
+    border-color: #3a8ee6;
+    outline: none;
+  }
+  @each $type,
+    $color
+      in (
+        primary: $primary,
+        success: $success,
+        warning: $warning,
+        danger: $danger,
+        info: $info
+      )
+  {
+    &-#{$type} {
+      background: #{$color};
+      border-color: #{$color};
+      color: #fff;
+    }
+  }
+  @each $type,
+    $color
+      in (
+        primary: $primary-hover,
+        success: $success-hover,
+        warning: $warning-hover,
+        danger: $danger-hover,
+        info: $info-hover
+      )
+  {
+    &-#{$type}:hover,
+    &-#{$type}:focus {
+      background: #{$color};
+      border-color: #{$color};
+      color: #fff;
+    }
+  }
+  @each $type,
+    $color
+      in (
+        primary: $primary-active,
+        success: $success-active,
+        warning: $warning-active,
+        danger: $danger-active,
+        info: $info-active
+      )
+  {
+    &-#{$type}:hover,
+    &-#{$type}:focus {
+      outline: none;
+    }
+  }
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+  &.is-loading {
+    position: relative;
+    pointer-events: none;
+  }
+  @each $type,
+    $color
+      in (
+        primary: $primary-disabled-color,
+        success: $success-disabled-color,
+        warning: $warning-disabled-color,
+        danger: $danger-disabled-color,
+        info: $info-disabled-color
+      )
+  {
+    &-#{$type}.is-disabled {
+      color: #fff;
+      background-color: #{$color};
+      border-color: #{$color};
+    }
+  }
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    cursor: not-allowed;
+  }
+  .icon + span {
+    margin-left: 5px;
+  }
+  span + .icon {
+    margin-left: 5px;
+  }
+  &-left {
+    svg {
+      order: 1;
+    }
+    span {
+      order: 2;
+    }
+  }
+  &-right {
+    svg {
+      order: 2;
+      margin-left: 5px;
+    }
+    span {
+      order: 1;
+      margin-left: 0 !important;
+    }
+  }
+  .zy-icon-loading {
+    animation: rotating 2s linear infinite;
+  }
+  @keyframes rotating {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}
