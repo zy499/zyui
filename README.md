@@ -1,4 +1,4 @@
-# zy-ui
+# zy499-ui
 [![npm version](https://badge.fury.io/js/zy499-ui.svg)](https://badge.fury.io/js/zy499-ui)
 
 ## 从零搭建自己的ui库
