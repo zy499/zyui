@@ -6,11 +6,12 @@
 ### 安装依赖
 ```
 yarn install
+yarn add zy499-ui (npm insatll zy499-ui --save)
 ```
 ### usage
 ```
-import zyUi from 'zy-ui'
-import 'zy-ui/dist/zy-ui.css'
+import zyUi from 'zy499-ui'
+import 'zy499-ui/dist/zy-ui.css'
 Vue.use(zyUi)
 ```
 
