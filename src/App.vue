@@ -83,6 +83,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   #app {
+    padding: 20px;
     .zy-button + .zy-button {
       margin-left: 10px;
     }
