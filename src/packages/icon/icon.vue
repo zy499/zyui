@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import './iconfont'
 export default {
   name: "zy-icon",
   props: {
@@ -13,6 +12,9 @@ export default {
       type:String,
       required:true
     }
+  },
+  mounted () {
+    import('./iconfont.js').then(icon => {})
   }
 };
 </script>
