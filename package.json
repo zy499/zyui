@@ -1,6 +1,6 @@
 {
   "name": "zy499-ui",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "private": false,
   "author": "ZHANGYANG",
   "scripts": {
@@ -8,9 +8,9 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test": "karma start",
-    "lib": "vue-cli-service build --target lib --name zy-ui  ./src/packages/index.js"
+    "lib": "vue-cli-service build --target lib --name zy499-ui  ./src/packages/index.js"
   },
-  "main": "./dist/zy-ui.umd.min.js",
+  "main": "./dist/zy499-ui.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
